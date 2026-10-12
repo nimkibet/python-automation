@@ -37,7 +37,7 @@ A production-grade Python automation framework designed to simulate authentic hu
    - **Scroll Dynamics:** Chaotic burst scrolling with variable notch delays, hesitation pauses, and reading drift.
 
 3. **Multi-Application Task Suite**
-   - **Web Tasks:** YouTube Shorts browsing, Wikipedia reading with `Alt + Shift + X` shortcuts, Tech News reading (with smart `F5` reload optimization), Reddit browsing, GitHub Trending exploration, and Project Gutenberg novel reading.
+   - **Web Tasks:** YouTube Shorts browsing, Wikipedia reading with `Alt + Shift + X` shortcuts, Multi-Genre E-Commerce & Shopping browsing (Jumia, Alibaba, AliExpress, Amazon, eBay, Etsy, Target, etc.), Tech News reading (with smart `F5` reload optimization), Reddit browsing, GitHub Trending exploration, and Project Gutenberg novel reading.
    - **Desktop Tasks:** Notepad essay authoring, MS Paint freehand drawing, Command Prompt diagnostic commands, and VS Code programming sessions.
 
 4. **Zero-Trust Safety & Emergency Yield**
@@ -241,12 +241,13 @@ All primary settings are located in **`final_bot/config/settings.py`**:
 - **`TOTAL_RUNTIME`**: Maximum continuous runtime for an automation session (default: `36000` = 10 hours).
 - **`SHORTS_URL`**: Target URL for YouTube Shorts.
 - **`WIKI_URLS`**: Wikipedia URLs used for random article browsing.
+- **`SHOPPING_AND_EXPLORE_URLS`**: 25+ diverse online shopping, e-commerce (Jumia, Alibaba, AliExpress, Amazon, eBay, Etsy), tech reviews, travel, culture, and guides.
 - **`TECH_NEWS_URLS`**: List of technology news portals rotated by the bot.
 - **`REDDIT_URLS`**: Subreddits visited during community browsing.
 - **`GITHUB_URLS`**: GitHub trending repositories explored.
 - **`NOVEL_URLS`**: Project Gutenberg full-text novel URLs.
 - **`ESSAY_TOPICS`**: Realistic multi-paragraph essay templates typed into Notepad.
-- **`SCROLL_PROFILES`**: Scroll notch ranges, pause intervals, backwards scroll probability, and distraction drifts for each content type.
+- **`SCROLL_PROFILES`**: Scroll notch ranges, pause intervals, backwards scroll probability, and distraction drifts for each content type (includes `shopping` profile).
 
 ---
 

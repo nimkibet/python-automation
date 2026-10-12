@@ -65,6 +65,42 @@ ESSAY_TOPICS = [
     "The history of computing is a history of abstraction. Each generation of engineers built a higher floor for the next to stand on. Assembly language abstracted machine code. High-level languages abstracted assembly. Garbage collection abstracted memory management.\n\nToday, large language models are beginning to abstract natural language itself into executable computation. A developer can describe intent in plain English and receive working code. This is not a replacement for programming skill, it is a new and powerful tool that amplifies it.\n\n",
 ]
 
+# Diverse Multi-Genre & E-Commerce / Shopping URLs (25+ Sites)
+SHOPPING_AND_EXPLORE_URLS = [
+    # E-Commerce & Online Marketplaces
+    'www.jumia.com/',
+    'www.alibaba.com/',
+    'www.aliexpress.com/',
+    'www.amazon.com/',
+    'www.ebay.com/',
+    'www.etsy.com/',
+    'www.target.com/',
+    # Tech Specs, Gadgets & Reviews
+    'www.gsmarena.com/',
+    'www.producthunt.com/',
+    'www.cnet.com/',
+    # Guides, Q&A & Knowledge
+    'www.quora.com/',
+    'medium.com/',
+    'www.wikihow.com/',
+    'www.instructables.com/',
+    # Travel & Exploration
+    'www.booking.com/',
+    'www.tripadvisor.com/',
+    'www.nationalgeographic.com/',
+    'www.lonelyplanet.com/',
+    # Lifestyle, Entertainment & Culture
+    'www.imdb.com/',
+    'www.goodreads.com/',
+    'www.allrecipes.com/',
+    'www.healthline.com/',
+    # Creative, Design & Science
+    'www.behance.net/',
+    'dribbble.com/',
+    'www.nature.com/',
+    'www.ted.com/',
+]
+
 # notch_range, pause_range, back_prob, distract_prob, distract_range
 SCROLL_PROFILES = {
     'reading':  ((1, 3), (2.5, 6.5),  0.10, 0.02, (6.0, 12.0)),
@@ -73,4 +109,5 @@ SCROLL_PROFILES = {
     'reddit':   ((2, 4), (2.0, 5.0),  0.08, 0.02, (5.0, 10.0)),
     'github':   ((1, 3), (2.0, 6.0),  0.08, 0.02, (5.0, 10.0)),
     'code':     ((1, 2), (2.0, 6.0),  0.10, 0.02, (5.0, 10.0)),
+    'shopping': ((1, 4), (1.5, 4.5),  0.14, 0.03, (5.0, 10.0)),
 }

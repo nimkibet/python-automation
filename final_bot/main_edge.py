@@ -20,6 +20,7 @@ TASK_WEIGHTS = {
     web_tasks.task_read_wiki:         3,
     web_tasks.task_browse_news:       3,
     web_tasks.task_browse_reddit:     3,
+    web_tasks.task_browse_explore:    3,
     web_tasks.task_read_novel:        2,
     web_tasks.task_browse_github:     2,
     sys_tasks.task_type_essay:        1,

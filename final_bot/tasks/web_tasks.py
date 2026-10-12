@@ -6,7 +6,7 @@ from core.input_driver import hotkey, safe_press
 from core.human_physics import human_typing, content_scroll_session, active_wait, human_scroll
 from core.window_manager import maximize_active_window, close_tab_safely
 from tasks.shared import open_browser, _open_url
-from config.settings import SHORTS_URL, WIKI_URLS, TECH_NEWS_URLS, REDDIT_URLS, GITHUB_URLS, NOVEL_URLS
+from config.settings import SHORTS_URL, WIKI_URLS, TECH_NEWS_URLS, REDDIT_URLS, GITHUB_URLS, NOVEL_URLS, SHOPPING_AND_EXPLORE_URLS
 
 BROWSER_EXE = 'brave'
 BROWSER_TITLE = 'Brave'
@@ -167,3 +167,40 @@ def task_browse_github(duration):
     content_scroll_session('github', duration)
     if not state.is_stopped():
         close_tab_safely()
+
+def task_browse_explore(duration):
+    log(f'Task: Browsing Shopping & Multi-Genre Sites on {BROWSER_TITLE}')
+    open_browser(BROWSER_EXE, BROWSER_TITLE)
+    if state.is_stopped(): return
+
+    current_url = random.choice(SHOPPING_AND_EXPLORE_URLS)
+    if not _open_url(current_url): return
+    maximize_active_window()
+    time.sleep(random.uniform(1.5, 3.0))
+
+    start = time.time()
+    chunk = random.uniform(50.0, 100.0)
+    content_scroll_session('shopping', min(chunk, duration))
+
+    if not state.is_stopped() and (time.time() - start) < duration - 50:
+        next_url = random.choice(SHOPPING_AND_EXPLORE_URLS)
+        if next_url == current_url:
+            log("Same site selected, refreshing feed (F5)...")
+            safe_press('f5')
+            time.sleep(random.uniform(2.0, 4.0))
+        else:
+            hotkey('ctrl', 'l')
+            time.sleep(0.3)
+            human_typing(next_url, wpm=90)
+            if not state.is_stopped():
+                safe_press('enter')
+                time.sleep(random.uniform(2.5, 4.5))
+
+        current_url = next_url
+        remaining = duration - (time.time() - start)
+        if remaining > 0 and not state.is_stopped():
+            content_scroll_session('shopping', remaining)
+
+    if not state.is_stopped():
+        close_tab_safely()
+
