@@ -1,0 +1,28 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Log files
+*.log
+idle_automation.log
+idle_shorts.log
+idle_firefox.log
+
+# Virtual environments
+venv/
+env/
+.venv/
+ENV/
+
+# Editor & OS artifacts
+.vscode/
+.idea/
+*.suo
+*.user
+Thumbs.db
+desktop.ini
+.DS_Store
+
+# Temporary scratch & test artifacts
+scratch/
