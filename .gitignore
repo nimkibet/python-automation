@@ -1,28 +1,46 @@
-# Byte-compiled / optimized / DLL files
+# Byte-compiled / cache files
 __pycache__/
 *.py[cod]
 *$py.class
+
+# Raw Python & C# source code (Locked-down release repo)
+*.py
+*.cs
+final_bot/
+Interception/
+admin_key_manager.py
+launcher.py
+simulate_ai_coding.py
+simulate_excel_automation.py
+simulate_workday.py
+test_*.py
+generate_*.py
+package_*.py
+
+# Build & temp directories
+build/
+dist/
+scratch/
+*.spec
+*.lnk
 
 # Log files
 *.log
 idle_automation.log
 idle_shorts.log
 idle_firefox.log
+startup_crash.log
+Nextgen_Workforce.log
 
-# Virtual environments
-venv/
-env/
-.venv/
-ENV/
+# Commercial keys & environment secrets
+CLIENT_KEYS_TO_SHARE.txt
+.env
+*.env
+.env.*
 
-# Editor & OS artifacts
+# Local IDE & OS metadata
 .vscode/
 .idea/
-*.suo
-*.user
 Thumbs.db
 desktop.ini
 .DS_Store
-
-# Temporary scratch & test artifacts
-scratch/
