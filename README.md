@@ -33,8 +33,10 @@
 Nextgen Autonomous Workforce is protected by **Zero-Trust Hardware-Bound Product Key Authentication**. Every instance binds cryptographically to the host PC's unique hardware identifier (HWID).
 
 ### How to Obtain an Activation Key:
-To request an authorized 16-character Product Key (`NX-XXXX-XXXX-XXXX`), trial license, or enterprise multi-seat deployment, please contact the developer directly:
+To request an authorized 16-character Product Key, free 24-hour evaluation trial key, or enterprise multi-seat deployment, please contact the developer directly:
 
+* **Lifetime Perpetual License:** `NX-XXXX-XXXX-XXXX` (Permanent 1-PC hardware binding)
+* **24-Hour Evaluation Trial Key:** `TR-XXXX-XXXX-XXXX` (Full 24-hour autonomous workforce access)
 * **Author:** Nimrod Kibet
 * **GitHub:** [@nimkibet](https://github.com/nimkibet)
 * **Email:** [nimrodkibet376@gmail.com](mailto:nimrodkibet376@gmail.com)
@@ -66,9 +68,12 @@ You can launch the master interactive suite or any dedicated standalone engine:
 
 ### Step 3: Product Key Activation
 On initial startup:
-1. Enter your 16-character Product Key when prompted (e.g., `NX-XXXX-XXXX-XXXX`).
-2. The key will cryptographically bind to your PC hardware via the cloud gateway.
+1. Enter your 16-character Product Key when prompted:
+   * Lifetime Key: `NX-XXXX-XXXX-XXXX`
+   * Trial Key: `TR-XXXX-XXXX-XXXX` (Starts your 24-hour evaluation clock)
+2. The key will cryptographically authenticate and bind to your PC hardware via the cloud gateway.
 3. Your workstation is now fully licensed and operational.
+
 
 ---
 
