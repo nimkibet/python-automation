@@ -62,6 +62,7 @@ This repository contains the pre-compiled, self-contained single-file binary run
 You can launch the master interactive suite or any dedicated standalone engine:
 
 * **Master Enterprise Suite:** Double-click **`start_workday.bat`** (or the Desktop shortcut).
+* **OEM Vendor Driver Mode:** Run `Nextgen_Workforce.exe --oem` (Uses Logitech G HUB / Razer virtual HID bridge with Interception fallback).
 * **Dedicated Coding Engine:** Double-click **`start_coding.bat`**.
 * **Dedicated Excel Engine:** Double-click **`start_excel.bat`**.
 * **Dedicated Browser Engine:** Double-click **`start_firefox.bat`**, **`start_brave.bat`**, or **`start_edge.bat`**.

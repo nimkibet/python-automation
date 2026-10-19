@@ -34,6 +34,10 @@ Nextgen_Workforce.log
 
 # Commercial keys & environment secrets
 CLIENT_KEYS_TO_SHARE.txt
+TRIAL_KEYS_TO_SHARE.txt
+*.sig
+*.key
+.sec_guard
 .env
 *.env
 .env.*
