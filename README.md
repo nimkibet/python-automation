@@ -10,12 +10,12 @@
 **Nextgen Autonomous Workforce Engine** is a high-performance, undetectable autonomous enterprise workforce platform engineered for Windows 10/11. Driven by kernel-level hardware simulation and natural cognitive pacing, Nextgen delivers realistic, human-indistinguishable computer activity across three mission-critical workloads:
 
 1. **💻 Software Engineering (Visual Studio Code):**
-   * Autonomous full-stack software development across **20 deep system architectures** (E-Commerce engines, microservices, auth gateways, REST APIs).
-   * Realistic multi-file development, variable typing cadence (65–95 WPM), natural code review pauses, tab navigation, and git staging.
+   * Autonomous full-stack software development across infinite dynamic system architectures powered by **Dynamic Task Pooling** (Gemini AI API + High-Entropy Procedural Generator).
+   * Procedural File Explorer address-bar navigation (`Win+E` -> Desktop -> Folder -> Address bar `code .`), variable typing cadence (65–95 WPM), natural code review pauses, tab navigation, and git staging.
 
 2. **📊 Financial Modeling & Analysis (Microsoft Excel):**
-   * Autonomous spreadsheet modeling across **8 deep financial workbooks** (Corporate P&L, DCF Valuation, SaaS Metrics, Capex, Inventory, Payroll, Debt Amortization).
-   * Types cell data, builds dynamic formulas (`=SUM`, `=AVERAGE`, `=IF`, `=VLOOKUP`), applies professional accounting borders and currency formatting, and runs automated `openpyxl` zero-trust downstream audits.
+   * Autonomous spreadsheet modeling across dynamically generated financial workbooks with 50–90 rows of dynamic data and live accounting formulas.
+   * Procedural File Explorer address-bar navigation (`Win+E` -> Desktop -> Models folder -> Address bar `excel "<file>"`), cell data entry, dynamic formulas (`=SUM`, `=AVERAGE`, `=IF`, `=VLOOKUP`), professional accounting borders and currency formatting.
 
 3. **🌐 Technical Web Exploration & Research:**
    * Autonomous multi-genre browsing across **220+ curated technical and enterprise domains** (Wikipedia, Reddit, GitHub, tech portals, and technical documentation).
