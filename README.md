@@ -21,8 +21,13 @@
    * Autonomous multi-genre browsing across **220+ curated technical and enterprise domains** (Wikipedia, Reddit, GitHub, tech portals, and technical documentation).
    * Supports **Mozilla Firefox**, **Brave Browser**, and **Microsoft Edge** with human reading physics, chaotic burst scrolling, and tab dynamics.
 
-4. **🛡️ Non-Maskable Human Priority (IRQ 0):**
-   * **Instant Yield (<30ms):** Any human mouse movement (>50px), mouse click (Left/Right/Middle), dedicated toggle key (`[PAUSE]` or `[F8]`), or double-tap `[ESC]` immediately halts the bot and returns full PC control to the user.
+4. **📖 Reading Mode (Subtle Scroll Jiggler Engine):**
+   * Autonomous zero-drift reading simulation designed for documents, PDFs, code files, and browsers.
+   * After 2 minutes (120s) of unbroken human inactivity, executes a subtle downward micro-scroll (1–3 notches), dwells naturally for 1.5s–3.0s, and scrolls back UP by the exact same amount.
+   * Viewport returns to the **exact same reading position** with 0px cursor movement while generating genuine Ring-0 hardware RawInput packets that reset OS sleep, screensavers, and Teams/Slack away timers.
+
+5. **🛡️ Non-Maskable Human Priority (IRQ 0):**
+   * **Instant Yield (<30ms):** Any human mouse movement (>25px), mouse click (Left/Right/Middle), dedicated toggle key (`[PAUSE]` or `[F8]`), or double-tap `[ESC]` immediately halts the bot and returns full PC control to the user.
    * **Inactivity Auto-Resume:** Resumes work seamlessly after 2 minutes of unbroken human inactivity.
    * **Fine-Grained Resumability:** Resumes from the exact code line, spreadsheet cell, or URL via persistent encrypted session checkpoints.
 
@@ -62,7 +67,7 @@ This repository contains the pre-compiled, self-contained single-file binary run
 You can launch the master interactive suite or any dedicated standalone engine:
 
 * **Master Enterprise Suite:** Double-click **`start_workday.bat`** (or the Desktop shortcut).
-* **OEM Vendor Driver Mode:** Run `Nextgen_Workforce.exe --oem` (Uses Logitech G HUB / Razer virtual HID bridge with Interception fallback).
+* **Dedicated Reading Mode:** Double-click **`start_reading_mode.bat`** (or run `Nextgen_Workforce.exe --reading`).
 * **Dedicated Coding Engine:** Double-click **`start_coding.bat`**.
 * **Dedicated Excel Engine:** Double-click **`start_excel.bat`**.
 * **Dedicated Browser Engine:** Double-click **`start_firefox.bat`**, **`start_brave.bat`**, or **`start_edge.bat`**.
