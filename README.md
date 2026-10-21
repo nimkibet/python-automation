@@ -59,9 +59,11 @@ This repository contains the pre-compiled, self-contained single-file binary run
    git clone https://github.com/nimkibet/python-automation.git
    cd python-automation
    ```
-2. Double-click **`setup_new_pc.bat`**.
-   * Automatically configures the stealth hardware driver library (`interception.dll`).
+2. Double-click **`setup_new_pc.bat`** (or run **`install_interception.bat`**):
+   * Automatically detects and installs the **Interception Ring-0 Kernel Filter Driver** (`install-interception.exe`).
+   * Configures the stealth hardware driver library (`interception.dll`).
    * Creates a convenient desktop shortcut: **`Nextgen Autonomous Workforce`**.
+   * *Note: A one-time PC restart is required after driver installation to activate the Ring-0 kernel filter service.*
 
 ### Step 2: Launch Automation
 You can launch the master interactive suite or any dedicated standalone engine:

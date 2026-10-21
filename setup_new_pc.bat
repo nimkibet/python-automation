@@ -44,11 +44,22 @@ if %ERRORLEVEL% NEQ 0 (
     python -m pip install pywin32 pynput requests psutil Pillow interception-python openpyxl uiautomation
 )
 
-REM 3. Ensure Interception Library DLL is in place
+REM 3. Ensure Interception Library DLL and Ring-0 Driver are in place
 if not exist "interception.dll" (
     if exist "Interception\Interception\library\x64\interception.dll" (
         copy /y "Interception\Interception\library\x64\interception.dll" "interception.dll" >nul
         echo [OK] Copied interception.dll to workspace.
+    )
+)
+if exist "installer\install-interception.exe" (
+    echo [*] Checking Interception Ring-0 Kernel Driver status...
+    python -c "import sys; sys.path.insert(0, 'final_bot'); from core.driver_installer import is_interception_driver_installed; sys.exit(0 if is_interception_driver_installed() else 1)" >nul 2>&1
+    if %ERRORLEVEL% NEQ 0 (
+        echo [*] Installing Interception Ring-0 Driver with Administrator privileges...
+        powershell -Command "Start-Process '%~dp0installer\install-interception.exe' -ArgumentList '/install' -Verb RunAs -Wait"
+        echo [NOTICE] Please restart your PC after driver installation.
+    ) else (
+        echo [OK] Ring-0 Interception Kernel Driver verified active.
     )
 )
 
@@ -82,6 +93,23 @@ pause
 exit /b 0
 
 :setup_standalone_shortcuts
+echo.
+echo [*] Checking Ring-0 Hardware Filter Driver status...
+"%~dp0Nextgen_Workforce.exe" --verify >nul 2>&1
+if %ERRORLEVEL% EQU 0 (
+    echo [OK] Ring-0 Interception Kernel Driver verified active.
+) else (
+    echo [!] Ring-0 Interception Driver not yet bound on this PC.
+    echo [*] Launching 1-click Ring-0 Driver Installer with Administrator privileges...
+    if exist "%~dp0installer\install-interception.exe" (
+        powershell -Command "Start-Process '%~dp0installer\install-interception.exe' -ArgumentList '/install' -Verb RunAs -Wait"
+    ) else (
+        powershell -Command "Start-Process '%~dp0Nextgen_Workforce.exe' -ArgumentList '--install-driver' -Verb RunAs -Wait"
+    )
+    echo.
+    echo [NOTICE] If you just installed the driver, please restart your PC before running automation.
+)
+
 echo.
 echo [*] Creating Desktop Shortcut for Nextgen Workforce...
 powershell -Command "$ws = New-Object -ComObject WScript.Shell; $s = $ws.CreateShortcut([System.IO.Path]::Combine([System.Environment]::GetFolderPath('Desktop'), 'Nextgen Autonomous Workforce.lnk')); $s.TargetPath = '%~dp0Nextgen_Workforce.exe'; $s.WorkingDirectory = '%~dp0'; $s.Description = 'Nextgen Autonomous Workforce Engine'; $s.Save()" >nul 2>&1
