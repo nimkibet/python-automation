@@ -44,13 +44,7 @@ if %ERRORLEVEL% NEQ 0 (
     python -m pip install pywin32 pynput requests psutil Pillow interception-python openpyxl uiautomation
 )
 
-REM 3. Ensure Interception Library DLL and Ring-0 Driver are in place
-if not exist "interception.dll" (
-    if exist "Interception\Interception\library\x64\interception.dll" (
-        copy /y "Interception\Interception\library\x64\interception.dll" "interception.dll" >nul
-        echo [OK] Copied interception.dll to workspace.
-    )
-)
+REM 3. Ensure Interception Ring-0 Kernel Driver is in place
 if exist "installer\install-interception.exe" (
     echo [*] Checking Interception Ring-0 Kernel Driver status...
     python -c "import sys; sys.path.insert(0, 'final_bot'); from core.driver_installer import is_interception_driver_installed; sys.exit(0 if is_interception_driver_installed() else 1)" >nul 2>&1
